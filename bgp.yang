@@ -1,0 +1,35 @@
+# RPC call that defines global level and neighbor level BGP peering information.
+rest_data = '''
+
+            <router>
+              <bgp xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-bgp">
+                <id>65001</id>
+                <bgp>
+                  <bestpath>
+                    <compare-routerid/>
+                  </bestpath>
+                  <log-neighbor-changes>true</log-neighbor-changes>
+                  <router-id>
+                    <ip-id>1.1.1.1</ip-id>
+                  </router-id>
+                </bgp>
+                <neighbor>
+                  <id>10.1.1.2</id>
+                  <remote-as>65002</remote-as>
+                  <log-neighbor-changes>
+                  </log-neighbor-changes>
+                  <timers>
+                    <keepalive-interval>30</keepalive-interval>
+                    <holdtime>90</holdtime>
+                  </timers>
+                  <transport>
+                    <connection-mode>active</connection-mode>
+                    <path-mtu-discovery>
+                      <disable/>
+                    </path-mtu-discovery>
+                  </transport>
+                </neighbor>
+              </bgp>
+            </router>
+
+            '''
