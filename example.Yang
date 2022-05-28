@@ -5,7 +5,7 @@ module: ietf-logical-network-element
            +--rw name           string
            +--mp root
               +--rw rt:routing/
-              |  +--rw router-id?                 yang:dotted-quad
+             
               |  +--rw control-plane-protocols
               |     +--rw control-plane-protocol* [type name]
               |        +--rw ospf:ospf/
